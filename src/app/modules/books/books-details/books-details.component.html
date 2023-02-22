@@ -1,0 +1,14 @@
+<div class="books-detail-container">
+    <app-books-details-placeholder *ngIf="isLoading"></app-books-details-placeholder>
+
+    <ng-container *ngIf="!isLoading">
+        <h1 class="books-details-title">All Books</h1>
+        <div class="books-contents">
+            <div *ngFor="let book of booksData">
+                <div class="book-contents-title">{{book?.title}}</div>
+                <div class="books-contents-others">publisher: {{book?.publisher}}</div>
+                <div class="books-contents-others">Published Date: {{book?.publishedDate}}</div>
+            </div>
+        </div>
+    </ng-container>
+</div>
